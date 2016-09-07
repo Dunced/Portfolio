@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Portfolio</title>
+ <?php include("php/navbar.php") ?>
+ </head>
+ <body class="bg">
+<header><h1> <div class="header">
+<span class="letter" data-letter="S">S</span>
+<span class="letter" data-letter="A">A</span>
+<span class="letter" data-letter="C">C</span>
+<span class="letter" data-letter="H">H</span>
+<span class="letter" data-letter="A">A</span>
+<span class="letter" data-letter=""> </span>
+<span class="letter" data-letter=""> </span>
+<span class="letter" data-letter="M">M</span>
+<span class="letter" data-letter="A">A</span>
+<span class="letter" data-letter="L">L</span>
+<span class="letter" data-letter="K">K</span>
+<span class="letter" data-letter="A">A</span>
+</div></h1>
+</header>
+<p class="slogan">blablablabalbalabalbalabla</p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(window).scroll(function() {
+if ($(this).scrollTop() > 1){
+    $('header').addClass("sticky");
+    $('p').addClass("sticky");
+  }
+  else{
+    $('header').removeClass("sticky");
+    $('p').removeClass("sticky");
+  }
+});
+</script>
+ </body>
+ <footer>
+ </footer>
+ </html>
