@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:900);
+*, *:before, *:after{
+  box-sizing:border-box;
+}
+* {
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+body{
+  background: url("../img/wallpaper.jpg") scroll no-repeat;
+  font-family: 'Lato', sans-serif;
+  height: 1500px;
+}
+div.header{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.header {
+  width: 100%;
+}
+.letter{
+  display: inline-block;
+  font-weight: 900;
+  position: relative;
+  color: rgba(0, 88, 117, 0.3);
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: #fff;
+  text-shadow:
+  -1px 0px 1px rgba(173,235,255,.8),
+  1px 0px 1px rgba(16,153,199,.5);
+  z-index: 3;
+  transform:
+  rotateX(0deg)
+  rotateY(-15deg)
+  rotateZ(0deg);
+}
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+  scale(1.08,1)
+  rotateX(0deg)
+  rotateY(0deg)
+  rotateZ(0deg)
+  skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: #fafafa;
+  transform:
+  rotateX(0deg)
+  rotateY(-40deg)
+  rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+  scale(1.08,1)
+  rotateX(0deg)
+  rotateY(40deg)
+  rotateZ(0deg)
+  skew(0deg,22deg);
+}
+.slogan {
+  position: fixed;
+  width: 98.8%;
+  font-size: 40px;
+  margin-top: 20%;
+  text-align: center;
+  height: 98%;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+p.sticky {
+  margin-top: 8%;
+  font-size: 30px;
+  background: rgba(0, 0, 0, 0.05);
+  text-align: left;
+  padding-left: 20px;
+  border: double;
+}
+/*Header animation */
+header{
+  position: fixed;
+  width: 98.8%;
+  font-size: 80px;
+  line-height: 105px;
+  height: 98%;
+  background: rgba(0, 172, 230, 0.1);
+  color: #fff;
+  transition: all 0.4s ease;
+  border: double;
+}
+header.sticky {
+  font-size: 30px;
+  line-height: 23px;
+  height: 70px;
+  background: rgba(0, 172, 230, 0.2);
+  text-align: left;
+  padding-left: 20px;
+}
